@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>My Website</title>
+    <style type="text/tailwindcss">
+      @layer components {
+        body {
+          @apply p-4 min-h-screen flex justify-center items-center bg-gray-50;
+        }
+
+        .container {
+          @apply flex flex-col gap-4 p-4 border-2 rounded-xl max-w-xl border-orange-400
+                 bg-gray-100 hover:shadow-xl transition-shadow;
+        }
+
+        .header {
+          @apply flex gap-4 h-24;
+        }
+
+        .header__container__title {
+          @apply flex items-center w-full justify-center border-b border-blue-400;
+        }
+
+        .header__title {
+          @apply text-4xl bg-clip-text bg-gradient-to-r from-orange-400 to-blue-400 
+                 text-transparent font-bold;
+        }
+
+        .header__image {
+          @apply h-24 w-24;
+        }
+
+        .main {
+          @apply flex flex-col gap-4;
+        }
+
+        .main__text {
+          @apply flex flex-col gap-2;
+        }
+
+        .table {
+          @apply rounded-xl bg-gray-200 px-4 pb-3 pt-0;
+        }
+
+        .table__inner {
+          @apply table-auto w-full;
+        }
+
+        .table__header {
+          @apply text-center text-lg font-bold px-4 py-2;
+        }
+
+        .table__row:nth-child(even) {
+          @apply bg-gray-300;
+        }
+
+        .table__data {
+          @apply border border-gray-400 px-4 py-2 font-medium;
+        }
+
+        .link {
+          @apply text-blue-400 hover:underline;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <div class="header__container__title">
+          <h1 class="header__title">My Website</h1>
+        </div>
+        <img class="header__image" src="../asssets/bsi.png" alt="BSI" />
+      </header>
+      <main class="main">
+        <div class="main__text">
+          <p>
+            Welcome to My Homepage, let me introduce myself. My name is Risal
+            Amin, I'm taking Bachelor of Information Technology at University of
+            Bina Sarana Informatika.
+          </p>
+          <p>
+            I'm a self-taught developer, who's currently pursuing a Full-Stack
+            development to create stunning user experiences on the front-end,
+            and scalable and secure infrastructure on the backend.
+          </p>
+          <p>If anyone wants to join me, Please contact below:</p>
+        </div>
+        <div class="table">
+          <table class="table__inner">
+            <thead>
+              <tr class="table__row">
+                <th class="table__header">Social Media</th>
+                <th class="table__header">Link</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="table__row">
+                <td class="table__data">Twitter</td>
+                <td class="table__data">
+                  <a
+                    class="link"
+                    target="_blank"
+                    rel="noreferrer"
+                    href="https://twitter.com/kuliahbsiaja"
+                  >
+                    @kuliahbsiaja
+                  </a>
+                </td>
+              </tr>
+              <tr class="table__row">
+                <td class="table__data">Instagram</td>
+                <td class="table__data">
+                  <a
+                    class="link"
+                    target="_blank"
+                    rel="noreferrer"
+                    href="https://www.instagram.com/kuliahbsiaja"
+                    >@kuliahbsiaja</a
+                  >
+                </td>
+              </tr>
+              <tr class="table__row">
+                <td class="table__data">YouTube</td>
+                <td class="table__data">
+                  <a
+                    class="link"
+                    target="_blank"
+                    rel="noreferrer"
+                    href="https://www.youtube.com/c/KuliahBSIAja"
+                    >Kuliah BSI Aja</a
+                  >
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
