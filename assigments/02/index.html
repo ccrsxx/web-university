@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Emilia</title>
+    <style type="text/tailwindcss">
+      .marquee {
+        width: 100%;
+        margin: 0 auto;
+        overflow: hidden;
+        box-sizing: border-box;
+      }
+
+      .marquee h1 {
+        display: inline-block;
+        width: max-content;
+        padding-left: 100%;
+        will-change: transform;
+        animation: marquee 15s linear infinite;
+      }
+
+      .marquee h1:hover {
+        animation-play-state: paused;
+      }
+
+      @keyframes marquee {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-100%);
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .marquee span {
+          animation-iteration-count: 1;
+          animation-duration: 0.01;
+          width: auto;
+          padding-left: 0;
+        }
+      }
+    </style>
+  </head>
+  <body class="grid min-h-screen place-items-center bg-gray-50 p-4">
+    <div
+      class="p-4 grid max-w-xl shadow rounded-lg gap-4 bg-white hover:shadow-lg transition duration-300 hover:-translate-y-2 cursor-pointer"
+    >
+      <header
+        class="marquee text-4xl font-extrabold leading-6 text-center text-white bg-gray-700 p-2 rounded"
+      >
+        <h1 class="p-2">Detail Produk - Emilia</h1>
+      </header>
+      <main class="grid grid-cols-[auto,1fr] gap-4 [&>*]:border [&>*]:p-2 [&>*]:rounded">
+        <figure
+          class="bg-gray-50 col-span-2 sm:col-span-1 sm:self-start place-self-center"
+        >
+          <img
+            class="sm:w-40 w-60 aspect-square rounded-lg"
+            src="../../assets/emilia.webp"
+            alt="Emilia"
+          />
+        </figure>
+        <article
+          class="grid grid-cols-[auto,1fr] gap-x-4 gap-y-1 bg-gray-100 col-span-2 sm:col-span-1"
+        >
+          <h2 class="text-gray-500">Nama</h2>
+          <p class="text-gray-900">Emilia</p>
+          <h2 class="text-gray-500">Harga</h2>
+          <p class="text-gray-900">Not for sale</p>
+          <h2 class="text-gray-500">Fitur</h2>
+          <ul class="ml-4 list-disc grid gap-1">
+            <li>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi,
+              reiciendis!
+            </li>
+            <li>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi,
+              reiciendis!
+            </li>
+            <li>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi,
+              reiciendis!
+            </li>
+          </ul>
+        </article>
+      </main>
+    </div>
+  </body>
+</html>
