@@ -41,7 +41,7 @@
     <h1 class="font-bold text-2xl text-gray-800">Student Management Data</h1>
   </header>
   <main class="bg-white p-4 rounded-lg max-w-md w-full shadow transition-shadow duration-200 hover:shadow-lg">
-    <form class="grid grid-cols-[auto,1fr] gap-4 items-center" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
+    <form class="grid grid-cols-[auto,1fr] gap-4 items-center" action="./06_process.php" method="POST">
       <label for="name">Name</label>
       <input required type="text" id="name" name="name">
       <label for="address">Address</label>

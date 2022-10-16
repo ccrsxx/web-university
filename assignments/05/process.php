@@ -37,37 +37,28 @@
 
 <body class="grid place-items-center bg-gray-5 min-h-screen gap-4 auto-rows-min content-center p-4">
   <header>
-    <h1 class="font-bold text-2xl text-gray-800">Your Student Data</h1>
+    <h1 class="font-bold text-2xl text-gray-800">Your Registration Data</h1>
   </header>
   <main class="bg-white p-4 rounded-lg max-w-md w-full shadow transition-shadow duration-200 hover:shadow-lg grid grid-cols-[auto,1fr] gap-4 items-center">
     <?php
     // map name and the value of the input
     $map_data = [
-      "Name" => $_POST["name"],
-      "Address" => $_POST["address"],
-      "Gender" => $_POST["gender"],
-      "Comment" => $_POST["comment"]
+      "Name" => $_POST['name'],
+      "Address" => $_POST['address'],
+      "Birthplace" => $_POST['birthplace'],
+      "Birthdate" => $_POST['birthdate'],
+      "Gender" => $_POST['gender'],
+      "Education" => $_POST['education']
     ];
-
-    $hobby_array = [];
-
-    foreach (['sport', 'music', 'travel'] as $hobby) {
-      if (isset($_POST[$hobby])) {
-        array_push($hobby_array, $_POST[$hobby]);
-      }
-    }
 
     // loop through the map and print the data
     foreach ($map_data as $key => $value) {
       echo "<h2>$key</h2>";
       echo "<p>$value</p>";
     }
-
-    $imploded_array = $hobby_array ? implode(", ", $hobby_array) : 'None';
-
-    echo "<h2>Hobby</h2>";
-    echo "<p>$imploded_array</p>";
     ?>
+
+    <button class="col-span-2 bg-blue-400 w-full text-white p-1 rounded-lg outline-none focus-visible:ring focus:ring-offset-2 hover:bg-blue-500 transition active:bg-blue-600 focus-visible:ring-blue-400 duration-200" onclick="history.back()">Back to home</button>
   </main>
 </body>
 
