@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style type="text/tailwindcss">
+      h2 {
+        @apply text-gray-700 font-bold text-center;
+      }
+
+      p {
+        @apply bg-gray-100 border-2 border-gray-200 rounded-lg p-1 outline-none text-center;
+      }
+
+      section {
+        @apply bg-white p-4 rounded-lg shadow transition-shadow duration-200 w-full hover:shadow-lg grid gap-2 items-start  h-full content-start;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body
+    class="grid place-items-center content-center bg-gray-5 min-h-screen gap-4 auto-rows-min p-4"
+  >
+    <header>
+      <h1 class="font-bold text-2xl text-gray-800 max-w-md text-center p-4">
+        Welcome to our XYZ Library
+      </h1>
+    </header>
+    <main
+      class="bg-white p-4 rounded-lg shadow transition-shadow sm:max-w-2xl max-w-none duration-200 hover:shadow-lg grid gap-4 items-start sm:grid-cols-[auto,1fr,auto] grid-cols-[repeat(auto-fit,minmax(200px,1fr))]"
+    >
+      <section>
+        <h2 class="text-center">Menu</h2>
+        <div class="grid gap-1">
+          <p>Login</p>
+          <p>Home</p>
+          <p>Books library</p>
+        </div>
+      </section>
+      <section>
+        <h2 class="text-center">News</h2>
+        <div class="grid gap-2">
+          <p>Make a website responsive</p>
+          <img
+            class="rounded-md"
+            src="https://c4.wallpaperflare.com/wallpaper/197/857/246/fan-art-anime-re-zero-kara-hajimeru-isekai-seikatsu-emilia-re-zero-wallpaper-preview.jpg"
+            alt="Emilia"
+          />
+        </div>
+      </section>
+      <section>
+        <h2 class="text-center">Popular books</h2>
+        <div class="grid gap-1">
+          <p>Web design</p>
+          <p>Programming</p>
+          <p>Database</p>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p class="bg-white text-lg border-0">&copy; ccrsxx 2022</p>
+    </footer>
+  </body>
+</html>
