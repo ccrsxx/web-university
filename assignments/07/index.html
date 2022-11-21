@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style type="text/tailwindcss">
+      h2 {
+        @apply text-gray-700 font-bold text-center;
+      }
+
+      p {
+        @apply bg-gray-100 border-2 border-gray-200 rounded-lg p-1 outline-none text-center;
+      }
+
+      p:nth-child(8n + 1),
+      p:nth-child(8n + 2),
+      p:nth-child(8n + 3),
+      p:nth-child(8n + 4) {
+        @apply bg-green-200;
+      }
+
+      h2:last-of-type {
+        @apply self-start;
+      }
+
+      p:last-of-type {
+        @apply whitespace-pre-line;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+
+  <body
+    class="grid place-items-center bg-gray-5 min-h-screen gap-4 auto-rows-min content-center p-4"
+  >
+    <header>
+      <h1 class="font-bold text-2xl text-gray-800 max-w-md text-center p-4">
+        DATA MAHASISWA UNIVERSITAS BINA SARANA INFORMATIKA KAMPUS CENGKARENG
+      </h1>
+    </header>
+    <main
+      class="bg-white p-4 rounded-lg max-w-xl w-full shadow transition-shadow duration-200 hover:shadow-lg grid grid-cols-4 gap-4 items-start justify-center"
+    >
+      <h2>NIP</h2>
+      <h2>NAMA</h2>
+      <h2>ALAMAT</h2>
+      <h2>KELAS</h2>
+
+      <p>23098767</p>
+      <p>Dwi Hartono</p>
+      <p>Kapuk Muara</p>
+      <p>12.3A.25</p>
+
+      <p>23098765</p>
+      <p>Anita wati</p>
+      <p>Kalideres</p>
+      <p>12.4A.25</p>
+
+      <p>17098766</p>
+      <p>Faisal Hadi</p>
+      <p>Tangerang</p>
+      <p>13.4B.25</p>
+
+      <p>12098765</p>
+      <p>Dedi Cahyadi</p>
+      <p>Green Garden</p>
+      <p>11.7A.25</p>
+
+      <p>23098765</p>
+      <p>Kunto Adi</p>
+      <p>Pesing</p>
+      <p>12.2A.25</p>
+
+      <p>12096547</p>
+      <p>Helen Asri</p>
+      <p>Kalideres</p>
+      <p>11.3A.25</p>
+
+      <p>32987654</p>
+      <p>Budi Ashari</p>
+      <p>Tegal Alur</p>
+      <p>19.2B.25</p>
+    </main>
+  </body>
+</html>

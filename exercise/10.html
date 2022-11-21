@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+  </head>
+  <body class="grid place-items-center min-h-screen">
+    <main class="flex flex-col gap-4 justify-center items-center">
+      <h1 class="text-xl font-bold">count: <span id="count"></span></h1>
+      <div>
+        <button class="bg-red-400 p-2 text-white rounded-md" id="increment">
+          Increment
+        </button>
+        <button class="bg-red-400 p-2 text-white rounded-md" id="decrement">
+          Decrement
+        </button>
+      </div>
+    </main>
+    <script>
+      let count = 0;
+
+      const countEl = document.querySelector('#count');
+      const button = document.querySelector('#increment');
+      const decrement = document.querySelector('#decrement');
+
+      countEl.textContent = count;
+
+      function handleClick(increment = false) {
+        count = increment ? count + 1 : count - 1;
+        countEl.textContent = count;
+      }
+
+      button.addEventListener('click', () => handleClick(true));
+      decrement.addEventListener('click', () => handleClick());
+    </script>
+  </body>
+</html>
